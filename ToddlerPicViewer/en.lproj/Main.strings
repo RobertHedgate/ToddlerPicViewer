@@ -1,0 +1,48 @@
+
+/* Class = "UIBarButtonItem"; title = "Ändra"; ObjectID = "0ul-I3-7vN"; */
+"0ul-I3-7vN.title" = "Ändra";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "2Uw-G4-mgz"; */
+"2Uw-G4-mgz.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Välj bild från biblioteket"; ObjectID = "8Ow-mV-tZh"; */
+"8Ow-mV-tZh.normalTitle" = "Välj bild från biblioteket";
+
+/* Class = "UILabel"; text = "Bildtext"; ObjectID = "FKV-Xp-MB6"; */
+"FKV-Xp-MB6.text" = "Bildtext";
+
+/* Class = "UITextField"; placeholder = "inget namn angivet"; ObjectID = "J5p-Ly-f7w"; */
+"J5p-Ly-f7w.placeholder" = "inget namn angivet";
+
+/* Class = "UIBarButtonItem"; title = "Ny bildserie"; ObjectID = "JAT-d8-5KB"; */
+"JAT-d8-5KB.title" = "Ny bildserie";
+
+/* Class = "UINavigationItem"; title = "Mina bildserier"; ObjectID = "NvF-NG-S38"; */
+"NvF-NG-S38.title" = "Mina bildserier";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Sp1-mi-jgC"; */
+"Sp1-mi-jgC.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "brD-fe-7CJ"; */
+"brD-fe-7CJ.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Ändra"; ObjectID = "caK-1G-kgB"; */
+"caK-1G-kgB.title" = "Ändra";
+
+/* Class = "UIButton"; normalTitle = "ny bildserie bild"; ObjectID = "dPD-V2-Qzi"; */
+"dPD-V2-Qzi.normalTitle" = "ny bildserie bild";
+
+/* Class = "UILabel"; text = "Namn"; ObjectID = "ok4-y1-Pzh"; */
+"ok4-y1-Pzh.text" = "Namn";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "pbj-pb-BnT"; */
+"pbj-pb-BnT.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Ny bildserie"; ObjectID = "vas-Qq-S0M"; */
+"vas-Qq-S0M.title" = "Ny bildserie";
+
+/* Class = "UINavigationItem"; title = "Ny bild"; ObjectID = "xPg-Dh-RqO"; */
+"xPg-Dh-RqO.title" = "Ny bild";
+
+/* Class = "UIButton"; normalTitle = "Ta bild med kamera"; ObjectID = "zl9-yq-Zns"; */
+"zl9-yq-Zns.normalTitle" = "Ta bild med kamera";
