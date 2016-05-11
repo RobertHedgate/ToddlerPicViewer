@@ -152,10 +152,4 @@ class EditSlideShowController: UITableViewController {
             viewController.cardId = card.id
         }
     }
-
-    @IBAction func saveClicked(sender: UIBarButtonItem) {
-        slideShowModel?.name = (labelCell?.nameLabel.text)!
-        AppDelegate.slideShowsModel.saveSlideShow(slideShowModel!)
-        navigationController?.popViewControllerAnimated(true)
-    }
 }

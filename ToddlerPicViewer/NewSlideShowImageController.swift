@@ -50,26 +50,6 @@ class NewSlideShowImageController : UIViewController, UIImagePickerControllerDel
         }
     }
     
-    @IBAction func SaveClicked(sender: UIBarButtonItem) {
-        var slideShowModel = AppDelegate.slideShowsModel.getSlideShowFromId(self.slideShowId)
-        if (slideShowModel == nil) {
-            // Should not get here!!!
-            slideShowModel = SlideShowModel.init(name: "", cards: [CardModel]())
-        }
-        var cardModel = slideShowModel?.getCardFromId(cardId)
-        if (cardModel == nil) {
-            cardModel = CardModel.init(text: displayText.text!, photo: currentImage.image!)
-        }
-        else {
-            cardModel?.text = displayText.text!
-            cardModel?.photo = currentImage.image!
-        }
-        
-        slideShowModel?.saveCard(cardModel!)
-        
-        navigationController?.popViewControllerAnimated(true)
-    }
-
     @IBAction func takePicture(sender: UIButton) {
         if (UIImagePickerController.isSourceTypeAvailable(.Camera) && UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil) {
             imagePicker.allowsEditing = false
