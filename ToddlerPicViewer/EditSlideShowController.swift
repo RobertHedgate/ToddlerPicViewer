@@ -43,7 +43,10 @@ class EditSlideShowController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2 + (slideShowModel?.cards.count)!
+        if (slideShowModel?.cards.count == 0) {
+            return 2
+        }
+        return 1 + (slideShowModel?.cards.count)!
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -55,12 +58,17 @@ class EditSlideShowController: UITableViewController {
             labelCell = cell
             return cell
         }
-        else if (indexPath.row == tableView.numberOfRowsInSection(0) - 1) {
-            let cellIdentifier = "NewImageCell"
-            let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ButtonTableViewCell
+//        else if (indexPath.row == tableView.numberOfRowsInSection(0) - 1) {
+//            let cellIdentifier = "NewImageCell"
+//            let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ButtonTableViewCell
+//            return cell
+//        }
+        
+        if (slideShowModel?.cards.count == 0) {
+            let cellIdentifier = "newSlideShowLabelCell"
+            let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
             return cell
         }
-        
         let cellIdentifier = "SlideShowImageCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! SlideShowImageTableViewCell
         
@@ -100,7 +108,7 @@ class EditSlideShowController: UITableViewController {
     
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // let the controller to know that able to edit tableView's row
-        if (indexPath.row == 0 || indexPath.row == tableView.numberOfRowsInSection(0) - 1) {
+        if (indexPath.row == 0) {
             return false
         }
         

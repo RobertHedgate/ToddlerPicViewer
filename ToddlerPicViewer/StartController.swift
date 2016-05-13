@@ -27,11 +27,22 @@ class StartController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let slideShows = AppDelegate.slideShowsModel.getSlideShows()
+        if (slideShows.count == 0) {
+            return 1
+        }
+        
         return slideShows.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let slideShows = AppDelegate.slideShowsModel.getSlideShows()
+        
+        if (slideShows.count == 0) {
+            let cellIdentifier = "StartLabelTableViewCell"
+            let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! StartLabelTableViewCell
+            return cell
+        }
+        
         let cellIdentifier = "StartTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! StartTableViewCell
         //let cellIdentifier = "cell"

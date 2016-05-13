@@ -27,6 +27,8 @@
 		88A376301CD8C34E0079F06D /* NewSlideShowImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3762F1CD8C34E0079F06D /* NewSlideShowImageController.swift */; };
 		88A3763B1CE1ED340079F06D /* noimage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 88A3763A1CE1ED340079F06D /* noimage2.png */; };
 		88A3763D1CE263CF0079F06D /* StartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3763C1CE263CF0079F06D /* StartTableViewCell.swift */; };
+		88F9160C1CE5E2C900B050B1 /* StartLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F9160B1CE5E2C900B050B1 /* StartLabelTableViewCell.swift */; };
+		88F9160E1CE5E89200B050B1 /* AdultTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F9160D1CE5E89200B050B1 /* AdultTestController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		88A3762F1CD8C34E0079F06D /* NewSlideShowImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewSlideShowImageController.swift; sourceTree = "<group>"; };
 		88A3763A1CE1ED340079F06D /* noimage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage2.png; sourceTree = "<group>"; };
 		88A3763C1CE263CF0079F06D /* StartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartTableViewCell.swift; sourceTree = "<group>"; };
+		88F9160B1CE5E2C900B050B1 /* StartLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartLabelTableViewCell.swift; sourceTree = "<group>"; };
+		88F9160D1CE5E89200B050B1 /* AdultTestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdultTestController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				88A3763C1CE263CF0079F06D /* StartTableViewCell.swift */,
+				88F9160B1CE5E2C900B050B1 /* StartLabelTableViewCell.swift */,
 				88A376041CC6CB830079F06D /* StartController.swift */,
 				88A3761D1CC826A10079F06D /* EditTableViewCell.swift */,
 				88A3761B1CC79EA70079F06D /* EditController.swift */,
@@ -111,6 +116,7 @@
 				88A3762B1CCC26090079F06D /* SlideShowImageCell.swift */,
 				88A3762D1CCC26620079F06D /* ButtonTableViewCell.swift */,
 				88A3762F1CD8C34E0079F06D /* NewSlideShowImageController.swift */,
+				88F9160D1CE5E89200B050B1 /* AdultTestController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -205,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88F9160E1CE5E89200B050B1 /* AdultTestController.swift in Sources */,
 				88A3761C1CC79EA70079F06D /* EditController.swift in Sources */,
 				88A376051CC6CB830079F06D /* StartController.swift in Sources */,
 				88A3762A1CCC25630079F06D /* LabelTableViewCell.swift in Sources */,
@@ -221,6 +228,7 @@
 				88A3760B1CC6CB830079F06D /* ToddlerPicViewer.xcdatamodeld in Sources */,
 				88A376281CCC16780079F06D /* EditSlideShowController.swift in Sources */,
 				88A3761A1CC79CDA0079F06D /* CardModel.swift in Sources */,
+				88F9160C1CE5E2C900B050B1 /* StartLabelTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

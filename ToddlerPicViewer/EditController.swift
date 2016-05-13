@@ -13,7 +13,10 @@ class EditController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
+        
+        // remove AdultTestController from navstack since we want to go back to start
+        self.navigationController?.viewControllers.removeAtIndex(1)
+     }
     
     override func viewDidAppear(animated: Bool) {
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
@@ -27,11 +30,19 @@ class EditController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let slideShows = AppDelegate.slideShowsModel.getSlideShows()
+        if (slideShows.count == 0) {
+            return 1
+        }
         return slideShows.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let slideShows = AppDelegate.slideShowsModel.getSlideShows()
+        if (slideShows.count == 0) {
+            let cellIdentifier = "EditLabelTableViewCell"
+            let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
+            return cell
+        }
         let cellIdentifier = "EditTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! EditTableViewCell
         
