@@ -18,8 +18,8 @@ class AdultTestController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let i = Int(arc4random_uniform(100))
-        let j = Int(arc4random_uniform(100))
+        let i = Int(arc4random_uniform(10)) + 1
+        let j = Int(arc4random_uniform(10)) + 1
         answer = i + j
         questionLabel.text = "Vad är " + i.description + " + " + j.description
     }
