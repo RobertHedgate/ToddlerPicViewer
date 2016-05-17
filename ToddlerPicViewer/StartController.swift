@@ -45,8 +45,6 @@ class StartController: UITableViewController {
         
         let cellIdentifier = "StartTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! StartTableViewCell
-        //let cellIdentifier = "cell"
-        //let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
         
         // Fetches the appropriate meal for the data source layout.
         let slideShow = slideShows[indexPath.row]
@@ -72,10 +70,6 @@ class StartController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
-        //let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-        //let destination = storyboard.instantiateViewControllerWithIdentifier("SlideShowController") as! SlideShowController
-        //navigationController?.pushViewController(destination, animated: true)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {

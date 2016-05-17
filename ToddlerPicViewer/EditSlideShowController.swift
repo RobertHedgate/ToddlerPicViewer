@@ -2,7 +2,7 @@
 //  EditSlideShow.swift
 //  ToddlerPicViewer
 //
-//  Created by Win8 Jayway on 23/04/16.
+//  Created by Robert on 23/04/16.
 //  Copyright © 2016 Robert. All rights reserved.
 //
 
@@ -58,11 +58,6 @@ class EditSlideShowController: UITableViewController {
             labelCell = cell
             return cell
         }
-//        else if (indexPath.row == tableView.numberOfRowsInSection(0) - 1) {
-//            let cellIdentifier = "NewImageCell"
-//            let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ButtonTableViewCell
-//            return cell
-//        }
         
         if (slideShowModel?.cards.count == 0) {
             let cellIdentifier = "newSlideShowLabelCell"

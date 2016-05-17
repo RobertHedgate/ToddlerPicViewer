@@ -71,10 +71,6 @@ class EditController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
-        //let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-        //let destination = storyboard.instantiateViewControllerWithIdentifier("SlideShowController") as! SlideShowController
-        //navigationController?.pushViewController(destination, animated: true)
     }
     
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -106,7 +102,6 @@ class EditController: UITableViewController {
         if (segue.identifier == "SlideShowSegue") {
             // pass data to next view
             let viewController:EditSlideShowController = segue.destinationViewController as! EditSlideShowController
-            //let sourceController:SlideShowTableViewCell = sender as! SlideShowTableViewCell
             let sourceController:EditTableViewCell = sender as! EditTableViewCell
             viewController.id = sourceController.id
         }

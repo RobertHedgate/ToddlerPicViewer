@@ -2,7 +2,7 @@
 //  NewSlideShowImage.swift
 //  ToddlerPicViewer
 //
-//  Created by Win8 Jayway on 03/05/16.
+//  Created by Robert on 03/05/16.
 //  Copyright © 2016 Robert. All rights reserved.
 //
 
