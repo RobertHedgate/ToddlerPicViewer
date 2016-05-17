@@ -57,7 +57,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inga bildserier är skapade. Tryck på Ändra för att skapa en bildserie." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pw-a3-tUn">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                            <rect key="frame" x="8" y="-1" width="584" height="99.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -65,8 +65,8 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="4pw-a3-tUn" firstAttribute="centerX" secondItem="ax1-XP-iqF" secondAttribute="centerX" id="2I4-ER-v4T"/>
-                                        <constraint firstItem="4pw-a3-tUn" firstAttribute="width" secondItem="ax1-XP-iqF" secondAttribute="width" id="XQc-MT-Dlc"/>
-                                        <constraint firstItem="4pw-a3-tUn" firstAttribute="centerY" secondItem="ax1-XP-iqF" secondAttribute="centerY" id="bFf-ws-FU3"/>
+                                        <constraint firstItem="4pw-a3-tUn" firstAttribute="width" secondItem="ax1-XP-iqF" secondAttribute="width" constant="-16" id="XQc-MT-Dlc"/>
+                                        <constraint firstItem="4pw-a3-tUn" firstAttribute="centerY" secondItem="ax1-XP-iqF" secondAttribute="centerY" constant="-1" id="bFf-ws-FU3"/>
                                         <constraint firstItem="4pw-a3-tUn" firstAttribute="height" secondItem="ax1-XP-iqF" secondAttribute="height" id="vg8-83-0v9"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -254,14 +254,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inga bildserier är skapade. Tryck på Ny bildserie för att skapa en bildserie." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFY-aw-YGg">
-                                            <rect key="frame" x="0.0" y="-0.5" width="600" height="90"/>
+                                            <rect key="frame" x="8" y="-0.5" width="584" height="90"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="QFY-aw-YGg" firstAttribute="width" secondItem="tuP-zY-eBG" secondAttribute="width" id="2gN-71-EGh"/>
+                                        <constraint firstItem="QFY-aw-YGg" firstAttribute="width" secondItem="tuP-zY-eBG" secondAttribute="width" constant="-16" id="2gN-71-EGh"/>
                                         <constraint firstItem="QFY-aw-YGg" firstAttribute="centerX" secondItem="tuP-zY-eBG" secondAttribute="centerX" id="5Zr-j2-O9p"/>
                                         <constraint firstItem="QFY-aw-YGg" firstAttribute="height" secondItem="tuP-zY-eBG" secondAttribute="height" id="6ps-aK-RNL"/>
                                         <constraint firstItem="QFY-aw-YGg" firstAttribute="centerY" secondItem="tuP-zY-eBG" secondAttribute="centerY" id="xta-Yj-9tY"/>
@@ -310,9 +310,6 @@
                                         </label>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="inget namn angivet" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J5p-Ly-f7w">
                                             <rect key="frame" x="65" y="7" width="527" height="30"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="527" id="GIV-m0-dhz"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <connections>
@@ -322,6 +319,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="J5p-Ly-f7w" firstAttribute="leading" secondItem="ok4-y1-Pzh" secondAttribute="trailing" constant="8" id="ef9-mX-fuS"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="J5p-Ly-f7w" secondAttribute="trailing" id="h5w-48-Wv2"/>
                                         <constraint firstItem="J5p-Ly-f7w" firstAttribute="centerY" secondItem="2j0-Ua-eDr" secondAttribute="centerY" id="uG0-kX-WYO"/>
                                         <constraint firstItem="ok4-y1-Pzh" firstAttribute="leading" secondItem="2j0-Ua-eDr" secondAttribute="leadingMargin" constant="3.5" id="uGq-R7-TZl"/>
                                         <constraint firstItem="ok4-y1-Pzh" firstAttribute="centerY" secondItem="2j0-Ua-eDr" secondAttribute="centerY" id="xWc-rH-DaL"/>
@@ -394,7 +392,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inga bilder är skapade. Tryck på Ny bild för att skapa en bild." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Pc-pA-akQ">
-                                            <rect key="frame" x="0.0" y="-0.5" width="600" height="44"/>
+                                            <rect key="frame" x="8" y="-0.5" width="584" height="44"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -404,7 +402,7 @@
                                         <constraint firstItem="3Pc-pA-akQ" firstAttribute="height" secondItem="jgA-ox-sjp" secondAttribute="height" id="KzX-Cx-uDI"/>
                                         <constraint firstItem="3Pc-pA-akQ" firstAttribute="centerY" secondItem="jgA-ox-sjp" secondAttribute="centerY" id="cvj-4Q-6Ud"/>
                                         <constraint firstItem="3Pc-pA-akQ" firstAttribute="centerX" secondItem="jgA-ox-sjp" secondAttribute="centerX" id="ea9-iH-o9c"/>
-                                        <constraint firstItem="3Pc-pA-akQ" firstAttribute="width" secondItem="jgA-ox-sjp" secondAttribute="width" id="j5K-IO-csq"/>
+                                        <constraint firstItem="3Pc-pA-akQ" firstAttribute="width" secondItem="jgA-ox-sjp" secondAttribute="width" constant="-16" id="j5K-IO-csq"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
