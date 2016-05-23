@@ -57,7 +57,7 @@ class EditController: UITableViewController {
         }
         else {
             cell.nameLabel.textColor = UIColor.grayColor()
-            cell.nameLabel.text = "<inget namn angivet>"
+            cell.nameLabel.text = NSLocalizedString("<inget namn angivet>", comment: "No name is set")
         }
         if (slideShow.cards.count > 0) {
             cell.currentImage.image = slideShow.cards[0].photo ?? UIImage(named: "noimage2")
@@ -85,7 +85,7 @@ class EditController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]?  {
-        let deleteAction = UITableViewRowAction(style: .Default, title: "Ta bort", handler: deleteAskHandler)
+        let deleteAction = UITableViewRowAction(style: .Default, title: NSLocalizedString("Ta bort", comment: "Remove"), handler: deleteAskHandler)
         deleteAction.backgroundColor = UIColor.redColor()
         
         return [deleteAction]
@@ -93,14 +93,14 @@ class EditController: UITableViewController {
 
     func deleteAskHandler(alert: UITableViewRowAction!, indexPath: NSIndexPath) {
         // Make sure question before delete
-        let alertController = UIAlertController(title: "Ta bort", message: "Är du säker på att du vill ta bort hela bildserien?", preferredStyle: .Alert)
+        let alertController = UIAlertController(title: NSLocalizedString("Ta bort", comment: "Remove"), message: NSLocalizedString("Är du säker på att du vill ta bort hela bildserien?", comment: "Are you sure to remove the slideshow?"), preferredStyle: .Alert)
         let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
             AppDelegate.slideShowsModel.deleteSlideShow(indexPath.row)
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.tableView.reloadData()
             })
         })
-        let cancelAction = UIAlertAction(title: "Avbryt", style: .Default, handler: nil)
+        let cancelAction = UIAlertAction(title: NSLocalizedString("Avbryt", comment: "Cancel"), style: .Default, handler: nil)
         alertController.addAction(defaultAction)
         alertController.addAction(cancelAction)
         presentViewController(alertController, animated: true, completion: nil)

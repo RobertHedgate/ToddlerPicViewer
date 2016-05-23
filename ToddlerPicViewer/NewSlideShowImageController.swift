@@ -61,7 +61,7 @@ class NewSlideShowImageController : UIViewController, UIImagePickerControllerDel
             presentViewController(imagePicker, animated: true, completion: nil)
         }
         else {
-            let alertController = UIAlertController(title: "Fel", message: "Ingen kamera funnen eller tillstånd har ej givits", preferredStyle: .Alert)
+            let alertController = UIAlertController(title: NSLocalizedString("Fel", comment: "Error"), message: NSLocalizedString("Ingen kamera funnen eller tillstånd har ej givits", comment: "No camera found or permission not given"), preferredStyle: .Alert)
             let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
             alertController.addAction(defaultAction)
             presentViewController(alertController, animated: true, completion: nil)

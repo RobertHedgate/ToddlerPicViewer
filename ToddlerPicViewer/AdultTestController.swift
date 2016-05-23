@@ -21,7 +21,7 @@ class AdultTestController : UIViewController {
         let i = Int(arc4random_uniform(10)) + 1
         let j = Int(arc4random_uniform(10)) + 1
         answer = i + j
-        questionLabel.text = "Vad är " + i.description + " + " + j.description
+        questionLabel.text = NSLocalizedString("Vad är ", comment: "What is ") + i.description + " + " + j.description
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {

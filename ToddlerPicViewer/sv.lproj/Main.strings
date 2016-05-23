@@ -1,72 +1,72 @@
 
 /* Class = "UIBarButtonItem"; title = "Ändra"; ObjectID = "0ul-I3-7vN"; */
-"0ul-I3-7vN.title" = "Edit";
+"0ul-I3-7vN.title" = "Ändra";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "2Uw-G4-mgz"; */
 "2Uw-G4-mgz.text" = "Label";
 
 /* Class = "UILabel"; text = "Inga bilder är skapade. Tryck på Ny bild för att skapa en bild."; ObjectID = "3Pc-pA-akQ"; */
-"3Pc-pA-akQ.text" = "No images are created. Press New image to create a new image.";
+"3Pc-pA-akQ.text" = "Inga bilder är skapade. Tryck på Ny bild för att skapa en bild.";
 
 /* Class = "UILabel"; text = "Inga bildserier är skapade. Tryck på Ändra för att skapa en bildserie."; ObjectID = "4pw-a3-tUn"; */
-"4pw-a3-tUn.text" = "No slideshows are created. Press Edit to create a slideshow";
+"4pw-a3-tUn.text" = "Inga bildserier är skapade. Tryck på Ändra för att skapa en bildserie.";
 
 /* Class = "UIButton"; normalTitle = "Välj bild från biblioteket"; ObjectID = "8Ow-mV-tZh"; */
-"8Ow-mV-tZh.normalTitle" = "Choose image from library";
+"8Ow-mV-tZh.normalTitle" = "Välj bild från biblioteket";
 
 /* Class = "UILabel"; text = "Bildtext"; ObjectID = "FKV-Xp-MB6"; */
-"FKV-Xp-MB6.text" = "Image text";
+"FKV-Xp-MB6.text" = "Bildtext";
 
 /* Class = "UILabel"; text = "Bara icke barn får ändra på blidserier. Alla ändringar sparas automatiskt och borttagna bildserier och bilder försvinner för alltid. Svara på frågan nedan för att komma vidare."; ObjectID = "Ix2-ZV-I13"; */
-"Ix2-ZV-I13.text" = "Only non children can alter slideshows. All changes are saved automatically and removed slideshows and images is gone forever. Answer the question below to proceed.";
+"Ix2-ZV-I13.text" = "Bara icke barn får ändra på blidserier. Alla ändringar sparas automatiskt och borttagna bildserier och bilder försvinner för alltid. Svara på frågan nedan för att komma vidare.";
 
 /* Class = "UITextField"; placeholder = "inget namn angivet"; ObjectID = "J5p-Ly-f7w"; */
-"J5p-Ly-f7w.placeholder" = "no name is set";
+"J5p-Ly-f7w.placeholder" = "inget namn angivet";
 
 /* Class = "UIBarButtonItem"; title = "Ny bildserie"; ObjectID = "JAT-d8-5KB"; */
-"JAT-d8-5KB.title" = "New slideshow";
+"JAT-d8-5KB.title" = "Ny bildserie";
 
 /* Class = "UINavigationItem"; title = "Mina bildserier"; ObjectID = "NvF-NG-S38"; */
-"NvF-NG-S38.title" = "My slideshows";
+"NvF-NG-S38.title" = "Mina bildserier";
 
 /* Class = "UIViewController"; title = "Vuxentest"; ObjectID = "Q1B-Pd-l2l"; */
-"Q1B-Pd-l2l.title" = "Adult test";
+"Q1B-Pd-l2l.title" = "Vuxentest";
 
 /* Class = "UILabel"; text = "Inga bildserier är skapade. Tryck på Ny bildserie för att skapa en bildserie."; ObjectID = "QFY-aw-YGg"; */
-"QFY-aw-YGg.text" = "No slideshows are created. Press New slideshow to create a slideshow.";
+"QFY-aw-YGg.text" = "Inga bildserier är skapade. Tryck på Ny bildserie för att skapa en bildserie.";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "Sp1-mi-jgC"; */
 "Sp1-mi-jgC.text" = "Label";
 
 /* Class = "UILabel"; text = "Vad är ?? + ??"; ObjectID = "XA7-Sz-VBn"; */
-"XA7-Sz-VBn.text" = "What is ?? + ??";
+"XA7-Sz-VBn.text" = "Vad är ?? + ??";
 
 /* Class = "UIButton"; normalTitle = "Rätta"; ObjectID = "aGU-x9-L9b"; */
-"aGU-x9-L9b.normalTitle" = "Rectify";
+"aGU-x9-L9b.normalTitle" = "Rätta";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "brD-fe-7CJ"; */
 "brD-fe-7CJ.text" = "Label";
 
 /* Class = "UINavigationItem"; title = "Ändra"; ObjectID = "caK-1G-kgB"; */
-"caK-1G-kgB.title" = "Edit";
+"caK-1G-kgB.title" = "Ändra";
 
 /* Class = "UIButton"; normalTitle = "ny bildserie bild"; ObjectID = "dPD-V2-Qzi"; */
-"dPD-V2-Qzi.normalTitle" = "new slideshow image";
+"dPD-V2-Qzi.normalTitle" = "ny bildserie bild";
 
 /* Class = "UIBarButtonItem"; title = "Ny bild"; ObjectID = "e7E-Sm-ThB"; */
-"e7E-Sm-ThB.title" = "New image";
+"e7E-Sm-ThB.title" = "Ny bild";
 
 /* Class = "UILabel"; text = "Namn"; ObjectID = "ok4-y1-Pzh"; */
-"ok4-y1-Pzh.text" = "Name";
+"ok4-y1-Pzh.text" = "Namn";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "pbj-pb-BnT"; */
 "pbj-pb-BnT.text" = "Label";
 
 /* Class = "UINavigationItem"; title = "Ny bildserie"; ObjectID = "vas-Qq-S0M"; */
-"vas-Qq-S0M.title" = "New slideshow";
+"vas-Qq-S0M.title" = "Ny bildserie";
 
 /* Class = "UINavigationItem"; title = "Ny bild"; ObjectID = "xPg-Dh-RqO"; */
-"xPg-Dh-RqO.title" = "New image";
+"xPg-Dh-RqO.title" = "Ny bild";
 
 /* Class = "UIButton"; normalTitle = "Ta bild med kamera"; ObjectID = "zl9-yq-Zns"; */
-"zl9-yq-Zns.normalTitle" = "Get image from camera";
+"zl9-yq-Zns.normalTitle" = "Ta bild med kamera";

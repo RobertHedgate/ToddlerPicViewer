@@ -19,7 +19,7 @@ class EditSlideShowController: UITableViewController {
         super.viewDidLoad()
         // if id is empty this is a new slideshow
         if (id != "") {
-            self.title = "Ändra bildserie"
+            self.title = NSLocalizedString("Ändra bildserie", comment: "Edit slideshow")
             slideShowModel = AppDelegate.slideShowsModel.getSlideShowFromId(id)
             self.name = (slideShowModel?.name)!
         }
@@ -78,7 +78,7 @@ class EditSlideShowController: UITableViewController {
         }
         else {
             cell.displayLabel.textColor = UIColor.grayColor()
-            cell.displayLabel.text = "<ingen text angiven>"
+            cell.displayLabel.text = NSLocalizedString("<ingen text angiven>", comment: "<No text is set>")
         }
         cell.photo.image = card!.photo ?? UIImage(named: "noimage2")
         cell.id = card!.id
@@ -130,7 +130,7 @@ class EditSlideShowController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]?  {
-        let deleteAction = UITableViewRowAction(style: .Default, title: "Ta bort", handler: deleteAskHandler)
+        let deleteAction = UITableViewRowAction(style: .Default, title: NSLocalizedString("Ta bort", comment: "Remove"), handler: deleteAskHandler)
         deleteAction.backgroundColor = UIColor.redColor()
         
         return [deleteAction]
@@ -138,14 +138,14 @@ class EditSlideShowController: UITableViewController {
     
     func deleteAskHandler(alert: UITableViewRowAction!, indexPath: NSIndexPath) {
         // ask before delete
-        let alertController = UIAlertController(title: "Ta bort", message: "Är du säker på att du vill ta bort denna bild?", preferredStyle: .Alert)
+        let alertController = UIAlertController(title: NSLocalizedString("Ta bort", comment: "Remove"), message: NSLocalizedString("Är du säker på att du vill ta bort denna bild?", comment: "Are you sure you want to remove this image"), preferredStyle: .Alert)
         let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
             self.slideShowModel!.deleteCard(indexPath.row - 1)
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.tableView.reloadData()
             })
         })
-        let cancelAction = UIAlertAction(title: "Avbryt", style: .Default, handler: nil)
+        let cancelAction = UIAlertAction(title: NSLocalizedString("Avbryt", comment: "Cancel"), style: .Default, handler: nil)
         alertController.addAction(defaultAction)
         alertController.addAction(cancelAction)
         presentViewController(alertController, animated: true, completion: nil)

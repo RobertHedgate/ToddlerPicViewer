@@ -57,7 +57,7 @@ class StartController: UITableViewController {
         }
         else {
             cell.nameLabel.textColor = UIColor.grayColor()
-            cell.nameLabel.text = "<inget namn angivet>"
+            cell.nameLabel.text = NSLocalizedString("<inget namn angivet>", comment: "No name is set")
         }
         cell.id = slideShow.id
         if (slideShow.cards.count > 0) {

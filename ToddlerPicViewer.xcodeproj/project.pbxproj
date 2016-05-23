@@ -27,6 +27,7 @@
 		88A376301CD8C34E0079F06D /* NewSlideShowImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3762F1CD8C34E0079F06D /* NewSlideShowImageController.swift */; };
 		88A3763B1CE1ED340079F06D /* noimage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 88A3763A1CE1ED340079F06D /* noimage2.png */; };
 		88A3763D1CE263CF0079F06D /* StartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3763C1CE263CF0079F06D /* StartTableViewCell.swift */; };
+		88E6CCF71CF3AB9D0075A717 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88E6CCF91CF3AB9D0075A717 /* Localizable.strings */; };
 		88F9160C1CE5E2C900B050B1 /* StartLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F9160B1CE5E2C900B050B1 /* StartLabelTableViewCell.swift */; };
 		88F9160E1CE5E89200B050B1 /* AdultTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F9160D1CE5E89200B050B1 /* AdultTestController.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,11 @@
 		88A3762F1CD8C34E0079F06D /* NewSlideShowImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewSlideShowImageController.swift; sourceTree = "<group>"; };
 		88A3763A1CE1ED340079F06D /* noimage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage2.png; sourceTree = "<group>"; };
 		88A3763C1CE263CF0079F06D /* StartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartTableViewCell.swift; sourceTree = "<group>"; };
+		88E6CCF31CF3A3860075A717 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		88E6CCF41CF3A52E0075A717 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Main.strings; sourceTree = "<group>"; };
+		88E6CCF81CF3AB9D0075A717 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		88E6CCFA1CF3ABA00075A717 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		88E6CCFB1CF3ABAA0075A717 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		88F9160B1CE5E2C900B050B1 /* StartLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartLabelTableViewCell.swift; sourceTree = "<group>"; };
 		88F9160D1CE5E89200B050B1 /* AdultTestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdultTestController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +94,7 @@
 		88A376011CC6CB830079F06D /* ToddlerPicViewer */ = {
 			isa = PBXGroup;
 			children = (
+				88E6CCF91CF3AB9D0075A717 /* Localizable.strings */,
 				88A376311CE1EA1F0079F06D /* Assets */,
 				88A376181CC79CC00079F06D /* Models */,
 				88A376171CC79C8E0079F06D /* ViewControllers */,
@@ -181,6 +188,7 @@
 			knownRegions = (
 				en,
 				Base,
+				sv,
 			);
 			mainGroup = 88A375F61CC6CB830079F06D;
 			productRefGroup = 88A376001CC6CB830079F06D /* Products */;
@@ -197,6 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88E6CCF71CF3AB9D0075A717 /* Localizable.strings in Resources */,
 				88A376101CC6CB830079F06D /* LaunchScreen.storyboard in Resources */,
 				88A3760D1CC6CB830079F06D /* Assets.xcassets in Resources */,
 				88A3763B1CE1ED340079F06D /* noimage2.png in Resources */,
@@ -239,6 +248,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				88A376071CC6CB830079F06D /* Base */,
+				88E6CCF31CF3A3860075A717 /* en */,
+				88E6CCF41CF3A52E0075A717 /* sv */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -249,6 +260,16 @@
 				88A3760F1CC6CB830079F06D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		88E6CCF91CF3AB9D0075A717 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88E6CCF81CF3AB9D0075A717 /* Base */,
+				88E6CCFA1CF3ABA00075A717 /* en */,
+				88E6CCFB1CF3ABAA0075A717 /* sv */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
