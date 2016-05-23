@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewSlideShowImageController : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class NewSlideShowImageController : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     var slideShowId = ""
     var cardId = ""
@@ -20,6 +20,7 @@ class NewSlideShowImageController : UIViewController, UIImagePickerControllerDel
         super.viewDidLoad()
         
         imagePicker.delegate = self
+        displayText.delegate = self
         
         if (cardId != "") {
             let slideShowModel = AppDelegate.slideShowsModel.getSlideShowFromId(self.slideShowId)
@@ -50,6 +51,11 @@ class NewSlideShowImageController : UIViewController, UIImagePickerControllerDel
             cardModel?.text = displayText.text!
             cardModel?.photo = currentImage.image
         }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {        
+        textField.resignFirstResponder()
+        return true
     }
     
     @IBAction func takePicture(sender: UIButton) {

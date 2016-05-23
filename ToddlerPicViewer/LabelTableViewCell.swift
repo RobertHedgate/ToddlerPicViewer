@@ -10,7 +10,7 @@ import UIKit
 
 typealias EditEndHandler = (LabelTableViewCell) -> Void
 
-class LabelTableViewCell: UITableViewCell {
+class LabelTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     @IBOutlet weak var nameLabel: UITextField!
     
@@ -19,9 +19,16 @@ class LabelTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        nameLabel.delegate = self
     }
     
     @IBAction func nameLabelEditEnd(sender: UITextField) {
         nameLabelEditEndHandler?(self)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
