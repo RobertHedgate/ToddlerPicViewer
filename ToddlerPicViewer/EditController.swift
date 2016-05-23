@@ -19,6 +19,7 @@ class EditController: UITableViewController {
      }
     
     override func viewDidAppear(animated: Bool) {
+        // update tableview on UI thread when view appears
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.tableView.reloadData()
         })
@@ -31,6 +32,7 @@ class EditController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let slideShows = AppDelegate.slideShowsModel.getSlideShows()
         if (slideShows.count == 0) {
+            // Empty text cell if there are no slideshows
             return 1
         }
         return slideShows.count
@@ -39,6 +41,7 @@ class EditController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let slideShows = AppDelegate.slideShowsModel.getSlideShows()
         if (slideShows.count == 0) {
+            // empty text cell
             let cellIdentifier = "EditLabelTableViewCell"
             let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
             return cell
@@ -46,7 +49,6 @@ class EditController: UITableViewController {
         let cellIdentifier = "EditTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! EditTableViewCell
         
-        // Fetches the appropriate meal for the data source layout.
         let slideShow = slideShows[indexPath.row]
         
         if (slideShow.name != "") {
@@ -69,11 +71,16 @@ class EditController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        // don´t want any cell to stay selected
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        let slideShows = AppDelegate.slideShowsModel.getSlideShows()
+        if (slideShows.count == 0) {
+            // can´t remove emoty text cell
+            return false
+        }
         return true
     }
     
@@ -85,6 +92,7 @@ class EditController: UITableViewController {
     }
 
     func deleteAskHandler(alert: UITableViewRowAction!, indexPath: NSIndexPath) {
+        // Make sure question before delete
         let alertController = UIAlertController(title: "Ta bort", message: "Är du säker på att du vill ta bort hela bildserien?", preferredStyle: .Alert)
         let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
             AppDelegate.slideShowsModel.deleteSlideShow(indexPath.row)

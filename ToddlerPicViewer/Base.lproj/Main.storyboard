@@ -413,7 +413,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Ny bildserie" id="vas-Qq-S0M">
-                        <barButtonItem key="rightBarButtonItem" title="ny bild" id="e7E-Sm-ThB">
+                        <barButtonItem key="rightBarButtonItem" title="Ny bild" id="e7E-Sm-ThB">
                             <connections>
                                 <segue destination="EJL-aa-DnZ" kind="show" identifier="SlideShowSegue" customClass="SlideShowSegue" customModule="ToddlerPicViewer" customModuleProvider="target" id="I45-VY-Lxl"/>
                             </connections>

@@ -9,6 +9,8 @@
 import UIKit
 import Foundation
 
+// Class for handling the objects which are shown on screen, such as image and text.
+// TODO add sound, video etc here
 class CardModel: NSObject, NSCoding {
     var text = ""
     var photo: UIImage?

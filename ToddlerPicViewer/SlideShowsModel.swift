@@ -8,31 +8,22 @@
 
 import UIKit
 
+// Class for handling several slideshows
 class SlideShowsModel {
     private  var slideShows: [SlideShowModel]?
 
     func getSlideShows() -> [SlideShowModel] {
+        // Lazyload slideshows. If nil then load
         if (slideShows == nil) {
             if let savedSlideShows = loadSlideShows() {
                 slideShows = []
                 slideShows! += savedSlideShows
             }
             
+            // if nil after load create an empty list
             if (slideShows == nil) {
                 slideShows = []
-                // No data has ever been created, add sample data
-                // Not working, image not saved to disk
-//                let slideShow1 = SlideShowModel(name: "exempel 1", cards: [CardModel]())
-//                let imageView = UIImageView.init()
-//                let photo = UIImage(named: "toycar.jpeg")
-//                imageView.image = photo
-//                let card = CardModel(text: "bil", photo: imageView.image!)
-//                slideShow1.saveCard(card)
-//                let slideShow2 = SlideShowModel(name: "exempel 2", cards: [CardModel]())
-//                
-//                slideShows! += [slideShow1, slideShow2]
             }
-
         }
         
         return slideShows!
@@ -40,6 +31,7 @@ class SlideShowsModel {
     
     func getSlideShowFromId(id: String) -> SlideShowModel? {
         if (slideShows == nil) {
+            // should never happend but is here for just in case
             return nil
         }
         
@@ -51,13 +43,14 @@ class SlideShowsModel {
         return nil
     }
 
-    func saveSlideShow(newSlideShow: SlideShowModel) {
+    func addSlideShow(newSlideShow: SlideShowModel) {
         if (slideShows == nil) {
             return
         }
 
         let oldSlideShow = getSlideShowFromId(newSlideShow.id)
         if (oldSlideShow == nil) {
+            // only add if this is a new slideshow
             slideShows!.append(newSlideShow)
         }
     }
@@ -73,15 +66,6 @@ class SlideShowsModel {
         
         slideShows!.removeAtIndex(index)
     }
-    
-    func saveCardToSlideShow(newSlideShow: SlideShowModel, newCard: CardModel) {
-        let oldSlideShow = getSlideShowFromId(newSlideShow.id)
-        if (oldSlideShow == nil) {
-            slideShows!.append(newSlideShow)
-        }
-        newSlideShow.saveCard(newCard)
-    }
-    
     
     func saveToDisk() {
         if (slideShows == nil) {

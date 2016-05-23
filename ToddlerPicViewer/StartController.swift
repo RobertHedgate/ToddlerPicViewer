@@ -16,6 +16,7 @@ class StartController: UITableViewController {
     }
  
     override func viewDidAppear(animated: Bool) {
+        // update tableview on UI thread when view is displayed
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.tableView.reloadData()
         })
@@ -28,6 +29,7 @@ class StartController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let slideShows = AppDelegate.slideShowsModel.getSlideShows()
         if (slideShows.count == 0) {
+            // this is the empty text cell which will show if there are no slideshows
             return 1
         }
         
@@ -38,6 +40,7 @@ class StartController: UITableViewController {
         let slideShows = AppDelegate.slideShowsModel.getSlideShows()
         
         if (slideShows.count == 0) {
+            // if no slideshows return the empty text
             let cellIdentifier = "StartLabelTableViewCell"
             let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! StartLabelTableViewCell
             return cell
@@ -46,7 +49,6 @@ class StartController: UITableViewController {
         let cellIdentifier = "StartTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! StartTableViewCell
         
-        // Fetches the appropriate meal for the data source layout.
         let slideShow = slideShows[indexPath.row]
         
         if (slideShow.name != "") {
@@ -68,7 +70,7 @@ class StartController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        // don´t want any cell to be selected
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     

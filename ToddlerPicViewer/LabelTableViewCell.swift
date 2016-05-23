@@ -24,10 +24,4 @@ class LabelTableViewCell: UITableViewCell {
     @IBAction func nameLabelEditEnd(sender: UITextField) {
         nameLabelEditEndHandler?(self)
     }
-    
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
 }

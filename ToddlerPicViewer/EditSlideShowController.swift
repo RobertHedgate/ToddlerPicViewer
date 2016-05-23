@@ -17,8 +17,9 @@ class EditSlideShowController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // if id is empty this is a new slideshow
         if (id != "") {
-            self.title = "Edit slideshow"
+            self.title = "Ändra bildserie"
             slideShowModel = AppDelegate.slideShowsModel.getSlideShowFromId(id)
             self.name = (slideShowModel?.name)!
         }
@@ -28,11 +29,13 @@ class EditSlideShowController: UITableViewController {
     }
 
     override func viewWillDisappear(animated: Bool) {
+        // update data when leaving view
         slideShowModel?.name = (labelCell?.nameLabel.text)!
-        AppDelegate.slideShowsModel.saveSlideShow(slideShowModel!)
+        AppDelegate.slideShowsModel.addSlideShow(slideShowModel!)
     }
     
     override func viewDidAppear(animated: Bool) {
+        // reload tableview when view has appeard
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.tableView.reloadData()
         })
@@ -44,9 +47,10 @@ class EditSlideShowController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (slideShowModel?.cards.count == 0) {
+            // name plus empty text cell
             return 2
         }
-        return 1 + (slideShowModel?.cards.count)!
+        return 1 + (slideShowModel?.cards.count)! // name plus count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -97,13 +101,17 @@ class EditSlideShowController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        // don´t keep selection
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // let the controller to know that able to edit tableView's row
         if (indexPath.row == 0) {
+            return false
+        }
+        if (slideShowModel?.cards.count == 0) {
+            // if no cards return false, empty text cell
             return false
         }
         
@@ -129,6 +137,7 @@ class EditSlideShowController: UITableViewController {
     }
     
     func deleteAskHandler(alert: UITableViewRowAction!, indexPath: NSIndexPath) {
+        // ask before delete
         let alertController = UIAlertController(title: "Ta bort", message: "Är du säker på att du vill ta bort denna bild?", preferredStyle: .Alert)
         let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
             self.slideShowModel!.deleteCard(indexPath.row - 1)
@@ -149,6 +158,7 @@ class EditSlideShowController: UITableViewController {
             viewController.slideShowId = (self.slideShowModel?.id)!
         }
         if (segue.identifier == "ExistingSlideShowSegue") {
+            // pass data to next view
             let viewController:NewSlideShowImageController = segue.destinationViewController as! NewSlideShowImageController
             viewController.slideShowId = (self.slideShowModel?.id)!
             let card = sender as! SlideShowImageTableViewCell

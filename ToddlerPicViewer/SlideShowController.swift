@@ -20,6 +20,8 @@ class SlideShowController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // add swipe right and left here because in storyboard only one works
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(SlideShowController.respondToSwipeGesture(_:)))
         swipeRight.direction = UISwipeGestureRecognizerDirection.Right
         self.view.addGestureRecognizer(swipeRight)
@@ -49,6 +51,7 @@ class SlideShowController: UIViewController {
     }
     
     func showCard() {
+        // some check so right picture shows regardless of currentIndex
         if (slideShowModel == nil || slideShowModel?.cards.count == 0) {
             textLabel.text = ""
             currentImageView.image = nil

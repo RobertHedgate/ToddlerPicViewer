@@ -28,11 +28,13 @@ class NewSlideShowImageController : UIViewController, UIImagePickerControllerDel
             displayText.text = card?.text
         }
         else {
+            // default image
             currentImage.image = UIImage(named: "noimage2")
         }
     }
     
     override func viewWillDisappear(animated: Bool) {
+        // save data when leaving view
         var slideShowModel = AppDelegate.slideShowsModel.getSlideShowFromId(self.slideShowId)
         if (slideShowModel == nil) {
             // Should not get here!!!
@@ -42,7 +44,7 @@ class NewSlideShowImageController : UIViewController, UIImagePickerControllerDel
         if (cardModel == nil) {
             cardModel = CardModel.init(text: displayText.text!, photo: currentImage.image)
             cardId = cardModel!.id
-            slideShowModel?.saveCard(cardModel!)
+            slideShowModel?.addCard(cardModel!)
         }
         else {
             cardModel?.text = displayText.text!
@@ -51,6 +53,7 @@ class NewSlideShowImageController : UIViewController, UIImagePickerControllerDel
     }
     
     @IBAction func takePicture(sender: UIButton) {
+        // get picture from camera. Warning if not allowed
         if (UIImagePickerController.isSourceTypeAvailable(.Camera) && UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil) {
             imagePicker.allowsEditing = false
             imagePicker.sourceType = .Camera
@@ -66,6 +69,7 @@ class NewSlideShowImageController : UIViewController, UIImagePickerControllerDel
     }
     
     @IBAction func takePictureLibrary(sender: UIButton) {
+        // get image from library. If not allowed iOS will show error
         imagePicker.allowsEditing = false
         if (UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary)) {
             imagePicker.sourceType = .PhotoLibrary
@@ -77,6 +81,7 @@ class NewSlideShowImageController : UIViewController, UIImagePickerControllerDel
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        // set selected image
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.currentImage.contentMode = .ScaleAspectFit
             self.currentImage.image = pickedImage
@@ -90,6 +95,7 @@ class NewSlideShowImageController : UIViewController, UIImagePickerControllerDel
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        // set selected image
         self.currentImage.image = image
         dismissViewControllerAnimated(true, completion: nil)
     }

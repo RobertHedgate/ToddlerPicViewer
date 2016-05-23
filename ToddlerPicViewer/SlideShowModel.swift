@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Class for handling one slideshow
 class SlideShowModel: NSObject, NSCoding {
     var name: String
     var cards: [CardModel]
@@ -19,7 +20,7 @@ class SlideShowModel: NSObject, NSCoding {
         self.id = NSUUID().UUIDString
     }
     
-    func saveCard(newCard: CardModel) {
+    func addCard(newCard: CardModel) {
         self.cards.append(newCard)
     }
     
@@ -33,6 +34,7 @@ class SlideShowModel: NSObject, NSCoding {
     }
     
     func deleteCard(index: Int) {
+        // check if index is in range
         if (index < 0 || index > cards.count - 1) {
             return
         }
